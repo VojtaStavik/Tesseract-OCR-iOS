@@ -7,7 +7,7 @@ SDK_IPHONEOS_PATH=$(shell xcrun --sdk iphoneos --show-sdk-path)
 SDK_IPHONESIMULATOR_PATH=$(shell xcrun --sdk iphonesimulator --show-sdk-path)
 XCODE_DEVELOPER_PATH=/Applications/Xcode.app/Contents/Developer
 XCODETOOLCHAIN_PATH=$(XCODE_DEVELOPER_PATH)/Toolchains/XcodeDefault.xctoolchain
-IOS_DEPLOY_TGT="7.0"
+IOS_DEPLOY_TGT="9.0"
 
 TESSERACT_SRC = $(shell pwd)/tesseract-ocr
 LEPTON_SRC = $(shell pwd)/$(LEPTON_NAME)
