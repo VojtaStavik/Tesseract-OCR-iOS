@@ -26,5 +26,5 @@ Pod::Spec.new do |s|
   s.ios.vendored_library    = 'TesseractOCR/lib/*.a'
   s.xcconfig                = { 'OTHER_LDFLAGS' => '-lstdc++ -lz',
                                 'CLANG_CXX_LIBRARY' => 'compiler-default' }
-
+  s.resources               = 'TesseractOCR/*.bundle'
 end

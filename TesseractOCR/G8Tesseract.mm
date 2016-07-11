@@ -146,8 +146,12 @@ namespace tesseract {
         _monitor->cancel_this = (__bridge void*)self;
 
         if (self.absoluteDataPath == nil) {
-            // config Tesseract to search trainedData in tessdata folder of the application bundle];
-            _absoluteDataPath = [NSBundle mainBundle].bundlePath;
+            // Use pod's tessdata folder
+            
+            NSBundle* podBundle = [NSBundle bundleForClass:[G8Tesseract class]];
+            NSString* bundlePath = [podBundle pathForResource:@"TessData" ofType:@"bundle"];
+            
+            _absoluteDataPath = bundlePath;
         }
         
         setenv("TESSDATA_PREFIX", [_absoluteDataPath stringByAppendingString:@"/"].fileSystemRepresentation, 1);
