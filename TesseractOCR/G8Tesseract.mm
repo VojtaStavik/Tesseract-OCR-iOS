@@ -149,7 +149,7 @@ namespace tesseract {
             // Use pod's tessdata folder
             
             NSBundle* podBundle = [NSBundle bundleForClass:[G8Tesseract class]];
-            NSString* bundlePath = [podBundle pathForResource:@"TessData" ofType:@"bundle"];
+            NSString* bundlePath = [podBundle pathForResource:@"tessdata" ofType:@"bundle"];
             
             _absoluteDataPath = bundlePath;
         }
